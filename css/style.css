@@ -10,6 +10,85 @@
 html{
     scroll-behavior: smooth;
 }
+/* home section styling */
+.home{
+    display: flex;
+    height: 100vh;
+    color: black;
+    min-height: 500px;
+    background-size: cover;
+    background: url("../image/2.jpg");
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .home-content{
+  font-size: smaller;
+  margin-top: 200px;
+  font-weight: 500;
+}
+.home .home-content span{
+  font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
+  color: yellow;
+
+}
+#container {
+    color:#999;
+    text-transform: uppercase;
+    font-size:36px;
+    font-weight:bold;
+    padding-top:200px;
+    position:absolute;
+    width:100%;
+    bottom:45%;
+    display:block;
+    text-align: center;
+  }
+  #flip {
+    height:50px;
+    overflow:hidden;
+  }
+  
+  #flip > div > div {
+    color:#fff;
+    padding:4px 12px;
+    height:45px;
+    margin-bottom:45px;
+    display:inline-block;
+  }
+  
+  #flip div:first-child {
+    animation: show 5s linear infinite;
+  }
+  
+  #flip div div {
+    background:#42c58a;
+  }
+  #flip div:first-child div {
+    background:#4ec7f3;
+  }
+  #flip div:last-child div {
+    background:#DC143C;
+  }
+  
+  @keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-270px;}
+  }
+  p {
+    position:fixed;
+    width:100%;
+    bottom:30px;
+    font-size:12px;
+    color:#999;
+    margin-top:200px;
+  }
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -160,32 +239,7 @@ section .title::after{
 }
 
 
-/* home section styling */
-.home{
-    display: flex;
-    height: 100vh;
-    color: #fff;
-    min-height: 500px;
-    background-size: cover;
-    background-image: url("../image/1.jpg");
-    font-family: 'Ubuntu', sans-serif;
-}
-.home .home-content{
-  font-size: smaller;
-  margin-top: 200px;
-  font-weight: 500;
-}
-.home .home-content span{
-  font-style: italic;
-  font-weight: 600;
-  font-size: 20px;
-  color: yellow;
 
-}
-.home .home-content h3{
-  font-size: medium;
-  text-align: center;
-}
 
 
 /* services section styling */
@@ -196,9 +250,13 @@ section .title::after{
   display: inline-block;
   width: 100%;
 }
+.services div{
+    font-size: smaller;
+    text-align: center;
+}
 .services h4{
   text-align: center;
-  font-size:smaller;
+  font-size: smaller;
 }
 .services, .teams{
     color:#fff;
@@ -244,7 +302,7 @@ section .title::after{
     transform: scale(1.05);
 }
 .services .serv-content .card i{
-    font-size: 50px;
+    font-size: 30px;
     color: crimson;
     transition: color 0.3s ease;
 }
